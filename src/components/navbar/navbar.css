@@ -1,29 +1,181 @@
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center ;
-    margin: 40px 120px;
-    color: white;
+/* src/components/navbar/navbar.css */
 
+/* Basic layout and safe stacking */
+.nav {
+  position: relative;
+  z-index: 20; /* must sit above the fixed background */
+  color: #fff;
+  font-family: "Outfit", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
-.nav-logo{
-    font-size: 42px;
-    font-weight: 500;
-    font-family: Outfit;;
+
+/* Inner container (centered) */
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
-.nav-menu{
-    display: flex;
+
+/* Brand */
+.nav-brand {
+  font-size: 1.5rem; /* ~24px */
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/* Nav wrapper */
+.nav-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ---- Desktop menu ---- */
+.nav-menu {
+  display: flex;
+  gap: 48px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* Links */
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 4px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: background 160ms ease, transform 120ms ease;
+}
+.nav-link:hover,
+.nav-link:focus {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+/* Primary action (Contact button) */
+.nav-link--primary {
+  background: #fff;
+  color: #161616;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.14);
+}
+.nav-link--primary:hover,
+.nav-link--primary:focus {
+  filter: brightness(0.96);
+}
+
+/* ------------- Mobile behavior ------------- */
+
+/* Hide the toggle on large screens */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* Accessible helper text (visually hidden) */
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Hamburger lines */
+.hamburger {
+  display: inline-block;
+  width: 28px;
+  height: 20px;
+  position: relative;
+}
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  transition: transform 220ms ease, opacity 200ms ease;
+}
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 9px; }
+.hamburger span:nth-child(3) { bottom: 0; }
+
+/* Toggle animation when open */
+.nav-toggle.open .hamburger span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.nav-toggle.open .hamburger span:nth-child(2) { opacity: 0; transform: scaleX(0.8); }
+.nav-toggle.open .hamburger span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+/* Mobile breakpoint */
+@media (max-width: 880px) {
+  .nav-inner {
+    padding: 14px 16px;
+  }
+
+  /* show the hamburger */
+  .nav-toggle {
+    display: inline-flex;
     align-items: center;
-    list-style: none;
-    font-size: 18px;
-    gap: 90px;
+    justify-content: center;
+  }
 
+  /* collapse the desktop menu */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(92vw, 420px);
+    height: 100vh;
+    flex-direction: column;
+    padding: 72px 24px 24px;
+    gap: 18px;
+    background: linear-gradient(180deg, rgba(8,10,20,0.96), rgba(6,6,15,0.98));
+    transform: translateX(105%); /* hidden by default */
+    transition: transform 320ms cubic-bezier(.2,.9,.2,1);
+    box-shadow: -12px 0 40px rgba(2,6,23,0.6);
+    backdrop-filter: blur(6px);
+  }
+
+  /* open state: slide in */
+  .nav-menu--open {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    font-size: 1.05rem;
+    padding: 10px 6px;
+  }
+
+  .nav-link--primary {
+    width: 100%;
+    text-align: center;
+  }
 }
 
-.nav-contact{
-    background-color: #FFFFFF;
-    padding: 10px 38px;
-    border-radius: 50px;
-    color: #262626;
-    cursor: pointer;
+/* Focus-visible for keyboard users */
+:focus-visible {
+  outline: 3px solid rgba(255,255,255,0.14);
+  outline-offset: 4px;
+}
+
+/* small polish for very large screens */
+@media (min-width: 1400px) {
+  .nav-brand { font-size: 1.75rem; }
+  .nav-menu { gap: 64px; }
 }

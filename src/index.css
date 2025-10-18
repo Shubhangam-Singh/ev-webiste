@@ -1,5 +1,36 @@
-body{
-  margin:0;
-  padding:0;
-  font-family: Poppins;
+/* index.css - base reset + font fallback */
+:root {
+  --bg-color: #080812;
+  --text-color: #ffffff;
+  --muted: rgba(255,255,255,0.85);
+}
+
+/* basic reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Poppins", Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.35;
+  overscroll-behavior-y: none;
+}
+
+/* Make images and video responsive by default */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

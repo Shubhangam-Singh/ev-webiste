@@ -1,3 +1,21 @@
 
 
 
+/* App.css - basic layout and spacing used by components */
+.app-root {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* keep main content readable over the background */
+main, .content {
+  position: relative;
+  z-index: 2;
+}
+
+/* tweak for pages where you want a transparent header and sticky nav */
+.header-space {
+  /* used if you want to offset content from top nav */
+  padding-top: 18px;
+}
