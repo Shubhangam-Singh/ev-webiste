@@ -58,12 +58,14 @@ src/
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/your-username/ev-website.git
+git clone https://github.com/Shubhangam-Singh/ev-webiste
 cd ev-website
 ```
 2️⃣ Install dependencies
-bash```
-npm install```
+bash
+```
+npm install
+```
 3️⃣ Run locally
 bash
 ```
@@ -81,7 +83,8 @@ bash
 ```
 npm run preview
 ```
-☁️ Deployment on Vercel
+
+##☁️ Deployment on Vercel
 This project is deployed on Vercel.
 
 To deploy your own version:
@@ -98,7 +101,7 @@ Set output directory: dist
 
 Click Deploy 🚀
 
-🧠 Customization Tips
+##🧠 Customization Tips
 Replace background images/videos in src/assets/.
 
 Edit hero text inside App.jsx (heroData array).
@@ -108,7 +111,7 @@ Change navbar brand name in navbar.jsx.
 Modify timing or transitions in component CSS files.
 
 
-🧑‍💻 Author
+EE🧑‍💻 Author
 Shubhangam Singh
 💼 Developer
 🌐 Live Site : https://ev-webiste-hwp4.vercel.app/
