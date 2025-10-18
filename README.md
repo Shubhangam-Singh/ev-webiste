@@ -1,18 +1,119 @@
-# React + Vite
+# ⚡ Elektronn-Ray — EV Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **Ghibli-inspired Electric Vehicle (EV) landing page** built with **React + Vite**, featuring cinematic animated backgrounds, smooth transitions, and a modern responsive layout.
 
-Currently, two official plugins are available:
+🌐 **Live Demo:** [https://ev-webiste-hwp4.vercel.app/](https://ev-webiste-hwp4.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚗 Overview
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+This project is a visually rich landing page that blends **realistic Ghibli-style visuals** with modern React components.  
+It showcases:
 
-## Expanding the ESLint configuration
+- A **dynamic background** that alternates between HD images and a video.
+- A **responsive hero section** with animated text, slide indicators, and video controls.
+- A clean, accessible **navigation bar** with a smooth mobile hamburger menu.
+- Built using **Vite + React** for ultra-fast builds and **deployed on Vercel**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# ev-webiste
-# ev-webiste
+---
+
+## 🧱 Tech Stack
+
+| Category | Technology |
+|-----------|-------------|
+| Framework | [React.js](https://react.dev/) |
+| Build Tool | [Vite](https://vitejs.dev/) |
+| Styling | CSS3 (responsive + animation) |
+| Deployment | [Vercel](https://vercel.com/) |
+| Media | Custom HD backgrounds & Ghibli-style animations |
+
+---
+
+## ✨ Features
+
+- 🎨 **Realistic Ghibli Aesthetic:** Soft lighting, painterly environments, and warm tones.
+- 🎥 **Dynamic Background:** Switches between looping HD video and static images.
+- 🖱️ **Interactive Hero Section:** Clickable dots and video toggle button.
+- 📱 **Responsive Navbar:** Modern mobile hamburger menu with slide animation.
+- ⚡ **High Performance:** Vite + React for fast load and HMR in development.
+
+---
+
+## 🧩 Folder Structure
+```
+src/
+├── assets/ # Images, videos, icons
+├── components/
+│ ├── background/ # Background video/image logic
+│ ├── hero/ # Hero text, dots, and play controls
+│ └── navbar/ # Navigation bar with responsive menu
+├── App.jsx # Main app component
+├── App.css
+└── index.css # Global base styles
+```
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/your-username/ev-website.git
+cd ev-website
+```
+2️⃣ Install dependencies
+bash```
+npm install```
+3️⃣ Run locally
+bash
+```
+npm run dev
+```
+Then open http://localhost:5173 in your browser.
+
+4️⃣ Build for production
+bash
+```
+npm run build
+```
+5️⃣ Preview locally (optional)
+bash
+```
+npm run preview
+```
+☁️ Deployment on Vercel
+This project is deployed on Vercel.
+
+To deploy your own version:
+
+Push the project to a GitHub repository.
+
+Go to Vercel Dashboard.
+
+Import your repo → Framework Preset: Vite.
+
+Set build command: npm run build
+
+Set output directory: dist
+
+Click Deploy 🚀
+
+🧠 Customization Tips
+Replace background images/videos in src/assets/.
+
+Edit hero text inside App.jsx (heroData array).
+
+Change navbar brand name in navbar.jsx.
+
+Modify timing or transitions in component CSS files.
+
+
+🧑‍💻 Author
+Shubhangam Singh
+💼 Developer
+🌐 Live Site : https://ev-webiste-hwp4.vercel.app/
+
+📜 License
+This project is licensed under the MIT License — feel free to use and modify.
+
+💡 Built with passion, code, and a touch of Ghibli magic.
