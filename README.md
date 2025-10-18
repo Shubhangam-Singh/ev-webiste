@@ -84,7 +84,7 @@ bash
 npm run preview
 ```
 
-##☁️ Deployment on Vercel
+## ☁️ Deployment on Vercel
 This project is deployed on Vercel.
 
 To deploy your own version:
@@ -101,7 +101,7 @@ Set output directory: dist
 
 Click Deploy 🚀
 
-##🧠 Customization Tips
+## 🧠 Customization Tips
 Replace background images/videos in src/assets/.
 
 Edit hero text inside App.jsx (heroData array).
@@ -111,7 +111,7 @@ Change navbar brand name in navbar.jsx.
 Modify timing or transitions in component CSS files.
 
 
-EE🧑‍💻 Author
+## 🧑‍💻 Author
 Shubhangam Singh
 💼 Developer
 🌐 Live Site : https://ev-webiste-hwp4.vercel.app/
